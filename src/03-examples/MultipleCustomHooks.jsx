@@ -1,5 +1,7 @@
 import React from "react";
 import { useCounter, useFetch } from "../hooks";
+import { LoadingMessage } from "./LoadingMessage";
+import { PokemonCard } from "./PokemonCard";
 
 
 export const MultipleCustomHooks = () => {
@@ -10,12 +12,29 @@ export const MultipleCustomHooks = () => {
 
   return (
     <>
-        <h1>Informacion de Pokémon</h1>
+        <div className="cabecera">
+            <h1>Pokédex</h1>
+            <h2 className="parpadea">Informacion del Pokémon</h2>
+        </div>
+        
         <hr />
 
-        { isLoading && <p>Cargando...</p> }
-
-        <h2>{ data?.name }</h2>
+        { 
+          isLoading 
+          ? <LoadingMessage />
+          : (
+            <PokemonCard 
+            id={ counter } 
+            name={ data.name }
+            sprites={[
+                data.sprites.front_default,
+                data.sprites.front_shiny,
+                data.sprites.back_default,
+                data.sprites.back_shiny,
+            ]}
+            />
+            )
+        }
 
         <button 
         onClick={ () => counter > 1 ? decrement() : null }

@@ -6,6 +6,13 @@ button {
     margin-right: 10px;
 }
 
+.cabecera {
+  background-color: #2A3663;
+  padding: 10px;
+  color: white;
+  border-radius: 8px 8px 8px 8px;
+}
+
 .texth {
     font-size:28px;
     
@@ -13,12 +20,12 @@ button {
   .parpadea {
     
     animation-name: parpadeo;
-    animation-duration: 1s;
+    animation-duration: 1.5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
   
     -webkit-animation-name:parpadeo;
-    -webkit-animation-duration: 1s;
+    -webkit-animation-duration: 1.5s;
     -webkit-animation-timing-function: linear;
     -webkit-animation-iteration-count: infinite;
   }
