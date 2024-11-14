@@ -1,9 +1,14 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
-import { Memorize } from './06-memos/Memorize';
 
 
+
+
+// import { Padre } from './07-tarea-memo/Padre';
+// import { CallbackHook } from './06-memos/CallbackHook';
+// import { MemoHook } from './06-memos/MemoHook';
+// import { Memorize } from './06-memos/Memorize';
 
 // esta parte no la pude hacer revisar luego y crear los archivos necesarios y el index.js en la carpeta
 // import { Layout } from './05-useLayoutEffect/Layout';
@@ -21,6 +26,6 @@ import { Memorize } from './06-memos/Memorize';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Memorize />
+    <Padre />
   </StrictMode>,
 );
